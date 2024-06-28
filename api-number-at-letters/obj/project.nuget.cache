@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "3gT8WSs2M41SE8aXdAcSxwPo2AhEjchtBlEzx2FUutG1H+M1t3zioea3RmkmFDTR4r3A9tu33fYejQqR3Du6FQ==",
+  "dgSpecHash": "3cwnqg7Y/0r6ivEKeB68Lcj8eJzWY3oWHDr/SME8JqEQ2vR77iXu5vLjZ+UL6qZ9m1NN3jRmDwQH3de6bp9V0w==",
   "success": true,
   "projectFilePath": "C:\\Users\\herna\\OneDrive\\Escritorio\\Proyectos Post Trabajo\\Proyectos .Net\\api-number-at-letters\\api-number-at-letters\\api-number-at-letters.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\herna\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
+    "C:\\Users\\herna\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\herna\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\herna\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.17\\microsoft.aspnetcore.openapi.7.0.17.nupkg.sha512",
     "C:\\Users\\herna\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\herna\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
     "C:\\Users\\herna\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\herna\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\herna\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
