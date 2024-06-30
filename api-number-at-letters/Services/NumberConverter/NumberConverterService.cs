@@ -1,8 +1,8 @@
-﻿using api_number_at_letters.Models;
-using api_number_at_letters.Models.Dto;
+﻿using api_number_at_letters.Models.Dto.Request;
+using api_number_at_letters.Models.NumberConverter;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace api_number_at_letters.Services
+namespace api_number_at_letters.Services.NumberConverter
 {
     public class NumberConverterService : INumberConverter
     {

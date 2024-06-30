@@ -47,6 +47,24 @@ namespace api_number_at_letters.Filters
                 context.HttpContext.Response.StatusCode = (int)HttpStatusCode.Forbidden;
                 context.ExceptionHandled = true;
             }
+            else if (exception.GetType() == typeof(InternalServerException))
+            {
+                var validation = new
+                {
+                    Status = StatusCodes.Status500InternalServerError,
+                    Title = "Internal Error",
+                    Detail = exception.Message
+                };
+
+                var json = new
+                {
+                    errors = new[] { validation }
+                };
+
+                context.Result = new ObjectResult(json);
+                context.HttpContext.Response.StatusCode = (int)HttpStatusCode.Forbidden;
+                context.ExceptionHandled = true;
+            }
         }
     }
 }
