@@ -5,30 +5,34 @@ using api_number_at_letters.Services.Autorization;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using api_number_at_letters.Filters;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Add services to the container.
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<GlobalExceptionsFilter>();
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped<INumberConverter, NumberConverterService>();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddSwaggerGen();
+
+//Add service authorization
+builder.Services.AddScoped<IAuthorizationService, AutorizationService>();
 
 //Providers validate objects
 builder.Services.AddFluentValidationAutoValidation()
     .AddFluentValidationClientsideAdapters();
 builder.Services.AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
 
-//Add service authorization
-builder.Services.AddScoped<IAuthorizationService, AutorizationService>();
 
 //Config JWT
 var privateKey = builder.Configuration.GetValue<string>("JwtSettings:key");
-Console.WriteLine(privateKey);
-var keyBytes = Encoding.ASCII.GetBytes(privateKey ?? "");
+var keyBytes = Encoding.ASCII.GetBytes(privateKey);
 
 builder.Services.AddAuthentication(config =>
 {
@@ -55,7 +59,7 @@ app.UseSwagger();
 
 app.UseSwaggerUI();
 
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

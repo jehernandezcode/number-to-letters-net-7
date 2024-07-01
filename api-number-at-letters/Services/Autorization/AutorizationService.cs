@@ -49,14 +49,11 @@ namespace api_number_at_letters.Services.Autorization
 
         public async Task<LoginResponseDto> Token(LoginRequestDto credentials)
         {
-            try
-            {
                 string token;
                 if(credentials == null)
                 {
                     throw new UnAuthorizationException("not authorized");
                 }
-
 
                 if (credentials.UserName == "userConverter" && credentials.Password == "123456789")
                 {
@@ -67,12 +64,6 @@ namespace api_number_at_letters.Services.Autorization
                 }
 
                 return new LoginResponseDto { Token = token}; 
-
-            }catch (Exception ex)
-            {
-                _logger.LogError(ex.Message);
-                throw new InternalServerException(ex.Message);
-            }
         }
     }
 }

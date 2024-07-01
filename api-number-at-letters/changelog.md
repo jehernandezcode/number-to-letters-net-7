@@ -8,3 +8,6 @@
 
 ## [0.1.0]
 - Add logic number convertion at letters in spanish
+
+## [0.1.1]
+- Refactor response objects and enable global filter exceptions
