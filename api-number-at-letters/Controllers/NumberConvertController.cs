@@ -4,6 +4,8 @@ using api_number_at_letters.Models.Dto.Response;
 using api_number_at_letters.Services.NumberConverter;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
+using Swashbuckle.AspNetCore.Annotations;
 using System.Net;
 
 namespace api_number_at_letters.Controllers
@@ -25,9 +27,11 @@ namespace api_number_at_letters.Controllers
 
         [Authorize]
         [HttpPost()]
+        [SwaggerOperation(Summary = "Este servicio toma un numero entero entre 0 y 999999999999 y retorna su equivalente en letras en español")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        
         public  ActionResult<ApiResponse> NumberToString([FromBody] NumberRequestDto body)
         {
             _logger.LogInformation($"Number Converter Controller - se solicita convertir el numero {body.Number} a su pronunciacion en español");
