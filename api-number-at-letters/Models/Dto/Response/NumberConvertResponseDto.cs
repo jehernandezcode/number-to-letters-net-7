@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace api_number_at_letters.Models.Dto
+namespace api_number_at_letters.Models.Dto.Response
 {
-    public class NumberConvertDto
+    public class NumberConvertResponseDto
     {
         [Required]
-        [MaxLength(5)]
+        [MaxLength(350)]
         public string NumberString { get; set; }
     }
 }

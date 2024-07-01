@@ -1,7 +1,7 @@
 ﻿using api_number_at_letters.Exceptions;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace api_number_at_letters.Models
+namespace api_number_at_letters.Models.NumberConverter
 {
     public static class NumberConverter
     {
@@ -69,6 +69,6 @@ namespace api_number_at_letters.Models
 
             return string.Join(" ", words).Trim();
         }
-       
+
     }
 }

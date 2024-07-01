@@ -1,9 +1,9 @@
-﻿using api_number_at_letters.Models.Dto;
+﻿using api_number_at_letters.Models.Dto.Request;
 using FluentValidation;
 
-namespace api_number_at_letters.Models
+namespace api_number_at_letters.Models.NumberConverter
 {
-    public class NumberConvertValidator: AbstractValidator<NumberRequestDto>
+    public class NumberConvertValidator : AbstractValidator<NumberRequestDto>
     {
         public NumberConvertValidator()
         {
