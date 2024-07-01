@@ -3,6 +3,7 @@ using api_number_at_letters.Models.Dto.Request;
 using api_number_at_letters.Models.Dto.Response;
 using api_number_at_letters.Services.Autorization;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 using System.Net;
 
 namespace api_number_at_letters.Controllers
@@ -24,6 +25,7 @@ namespace api_number_at_letters.Controllers
         }
 
         [HttpPost()]
+        [SwaggerOperation(Summary = "Servicio para authorizar una usuario con nombre y contraseña, este retorna un token usado en otros servicios")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
