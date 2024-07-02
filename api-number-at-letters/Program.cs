@@ -60,7 +60,7 @@ builder.Services.AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssembli
 
 
 //Config JWT
-var privateKey = builder.Configuration.GetValue<string>("SYMETRICKEY");
+var privateKey = builder.Configuration.GetValue<string>("JwtSettings:key");
 var keyBytes = Encoding.ASCII.GetBytes(privateKey);
 
 builder.Services.AddAuthentication(config =>
@@ -81,9 +81,6 @@ builder.Services.AddAuthentication(config =>
         ClockSkew = TimeSpan.Zero
     };
 });
-
-
-
 
 
 var app = builder.Build();
