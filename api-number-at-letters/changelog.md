@@ -12,3 +12,4 @@
 ## [0.1.1]
 - Refactor response objects and enable global filter exceptions
 - Enable option bearer token in swagger ui and service description
+- Add unit test NumberConvertService with XUnit 
