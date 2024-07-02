@@ -29,9 +29,15 @@ Para este proyecto se contemplo los siguientes concepto:
 
    https://github.com/jehernandezcode/number-to-letters-net-7.git
 
-2. Navega al directorio del proyecto:
+2. Navega al directorio del proyecto - archivo csproj
 
 3. Restaura las dependencias:
+
+dotnet restore
+
+4. Ejecutar el proyecto
+
+dotnet run -- .\api-number-at-letters.csproj
 
 ## Ejecucion de Test Unitarios
 
@@ -43,9 +49,9 @@ dotnet test
 
 dotnet run --project api-number-at-letters/api-number-at-letters.csproj
 
-2. La Ap  estara disponible en: https://localhost:7261
+2. La Api estara disponible en: http://localhost:5071
 
-3. Accede a la documentacion de Swagger en: https://localhost:7261/swagger/index.html
+3. Accede a la documentacion de Swagger en: http://localhost:5071/swagger/index.html
 
 4. Endpoints
 
@@ -53,7 +59,7 @@ dotnet run --project api-number-at-letters/api-number-at-letters.csproj
 
 Las credeciales por defecto para un login correcto son: userName = 'userConverter' y password = '123456789'
 
-curl --location 'https://localhost:7261/api/Authentication' \
+curl --location 'http://localhost:5071/api/Authentication' \
 --header 'Content-Type: application/json' \
 --data '{
 "userName": "userConverter",
@@ -62,7 +68,7 @@ curl --location 'https://localhost:7261/api/Authentication' \
 
 - POST - /api/NumberConvert: Este servicio esta protegido por JWT el cual debe ser enviado en el Header Authorization = Bearer + token
 
-curl --location 'https://localhost:7261/api/NumberConvert' \
+curl --location 'http://localhost:5071/api/NumberConvert' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer token' \
 --data '{
@@ -71,7 +77,7 @@ curl --location 'https://localhost:7261/api/NumberConvert' \
 
 ## Uso de api Publica - Bajo HTTP
 
-- POST - /api/Authentication: Iniciar sessi n y obtener token jwt (1 min de expiracion para efectos de prueba)
+- POST - /api/Authentication: Iniciar sessión y obtener token jwt (1 min de expiracion para efectos de prueba)
 
 Las credeciales por defecto para un login correcto son: userName = 'userConverter' y password = '123456789'
 
