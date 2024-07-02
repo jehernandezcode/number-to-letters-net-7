@@ -5,6 +5,6 @@ namespace api_number_at_letters.Models.Dto.Request
     public class NumberRequestDto
     {
         [Required]
-        public long Number { get; set; }
+        public long Number { get; set; } = long.MinValue;
     }
 }
