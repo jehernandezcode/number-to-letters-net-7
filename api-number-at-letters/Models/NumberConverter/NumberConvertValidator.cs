@@ -7,7 +7,11 @@ namespace api_number_at_letters.Models.NumberConverter
     {
         public NumberConvertValidator()
         {
-            RuleFor((data) => data.Number).GreaterThanOrEqualTo(0).LessThanOrEqualTo(999999999999).NotNull();
+            RuleFor((data) => data.Number).Must((number) => number != long.MinValue)
+                .WithMessage("Number is required")
+                .GreaterThanOrEqualTo(0)
+                .LessThanOrEqualTo(999999999999)
+                .NotNull();
         }
     }
 }
