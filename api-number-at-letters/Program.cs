@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using api_number_at_letters.Filters;
 using Microsoft.OpenApi.Models;
+using api_number_at_letters.Config;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Configuration.AddEnvironmentVariables();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddSwaggerGen(c =>
@@ -60,7 +63,11 @@ builder.Services.AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssembli
 
 
 //Config JWT
-var privateKey = builder.Configuration.GetValue<string>("JwtSettings:key");
+var privateKey = builder.Configuration["SYMETRICKEY"];
+builder.Services.Configure<KeyConfig>((options) =>
+{
+    options.KeySecret = privateKey ?? "";
+});
 var keyBytes = Encoding.ASCII.GetBytes(privateKey);
 
 builder.Services.AddAuthentication(config =>
