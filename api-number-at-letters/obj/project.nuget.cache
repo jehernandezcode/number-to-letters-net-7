@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1Vo5JaRxfkrb09dQ56t1qO2KdHytl//Pznkr9Mp2st7ctdJ/YcR2BWB5bVu/AFytrVEoZtjdqAm2Z5KCjHQyZQ==",
+  "dgSpecHash": "O51E67Tn+LEscYEBEr6DzbLCGbItBc1s57T/FBUBboLQjSbLb99UCDqEDbbXnD+Hjs8r8x262UDvAGXMDQSrkw==",
   "success": true,
   "projectFilePath": "C:\\Users\\herna\\OneDrive\\Escritorio\\Proyectos Post Trabajo\\Proyectos .Net\\api-number-at-letters\\api-number-at-letters\\api-number-at-letters.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,9 @@
     "C:\\Users\\herna\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.0\\microsoft.aspnetcore.authentication.jwtbearer.7.0.0.nupkg.sha512",
     "C:\\Users\\herna\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.17\\microsoft.aspnetcore.openapi.7.0.17.nupkg.sha512",
     "C:\\Users\\herna\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "C:\\Users\\herna\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\herna\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0-preview.5.24306.7\\microsoft.extensions.dependencyinjection.abstractions.9.0.0-preview.5.24306.7.nupkg.sha512",
+    "C:\\Users\\herna\\.nuget\\packages\\microsoft.extensions.options\\9.0.0-preview.5.24306.7\\microsoft.extensions.options.9.0.0-preview.5.24306.7.nupkg.sha512",
+    "C:\\Users\\herna\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.0-preview.5.24306.7\\microsoft.extensions.primitives.9.0.0-preview.5.24306.7.nupkg.sha512",
     "C:\\Users\\herna\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.1.2\\microsoft.identitymodel.abstractions.7.1.2.nupkg.sha512",
     "C:\\Users\\herna\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.1.2\\microsoft.identitymodel.jsonwebtokens.7.1.2.nupkg.sha512",
     "C:\\Users\\herna\\.nuget\\packages\\microsoft.identitymodel.logging\\7.1.2\\microsoft.identitymodel.logging.7.1.2.nupkg.sha512",
@@ -23,7 +25,10 @@
     "C:\\Users\\herna\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\herna\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
     "C:\\Users\\herna\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
-    "C:\\Users\\herna\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.1.2\\system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512"
+    "C:\\Users\\herna\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\herna\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.1.2\\system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512",
+    "C:\\Users\\herna\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\herna\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
