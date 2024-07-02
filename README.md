@@ -1,9 +1,9 @@
-# Nombre del Proyecto API
+# Number Converter API
 
 Esta API REST esta desarrollada con .NET 7, hace parte de un ejercicio de programacion bajo una arquitectura MVC y donde cuyo objetivo principal es ingresar un numero
-entero en los rangos 0 y 999.999.999.999; donde su resultado debe darse como la lectura de dicho numero pero en idioma espa�ol.
+entero en los rangos 0 y 999.999.999.999; donde su resultado debe darse como la lectura de dicho numero pero en idioma espa ol.
 
-## Caracter�sticas
+## Caracter sticas
 
 Para este proyecto se contemplo los siguientes concepto:
 
@@ -14,7 +14,7 @@ Para este proyecto se contemplo los siguientes concepto:
 - Global Filter Exception
 - Validaciones y atributos de validacion DTOs
 - Flujo JWT (autenticacion y authorizacion por bearer token)
-- Inyecci�n de dependencias
+- Inyecci n de dependencias
 - Changelog
 - Docker
 
@@ -23,7 +23,54 @@ Para este proyecto se contemplo los siguientes concepto:
 - .NET 7 SDK
 - IDE de su preferencia
 
-## Instalaci�n
+## Estructura del proyecto
+
+api-number-at-letters
+├─ Commons
+│  └─ KeyConfig.cs
+├─ Controllers
+│  ├─ AuthenticationController.cs
+│  └─ NumberConvertController.cs
+├─ Exceptions
+│  ├─ BadRequestException.cs
+│  ├─ InternalServerException.cs
+│  └─ UnAuthorizationException.cs
+├─ Filters
+│  └─ GlobalExceptionsFilter.cs
+├─ Models
+│  ├─ Dto
+│  │  ├─ Request
+│  │  │  ├─ LoginRequestDto.cs
+│  │  │  └─ NumberRequestDto.cs
+│  │  └─ Response
+│  │  	  ├─ LoginResponseDto.cs
+│  │     └─ NumberConvertResponseDto.cs
+│  ├─ NumberConverter
+│  │  ├─ NumberConvert.cs
+│  │  └─ NumberConvertValidator.cs
+│  └─ ApiResponse.cs
+├─ Services
+│	├─ Authorization
+│	│	├─ AuthorizationService.cs
+│	│	└─ IAuthorizationService.cs
+│	└─	NumberConverter
+│	│	├─ INumberConverter.cs
+│	│	└─ NumberConverterService.cs
+│   ├─ Api NumberConverter.postman_collection.json
+│   ├─ api-number-at-letters.csproj
+│   ├─ api-number-at-letters.csproj.user
+│   ├─ appsettings.json
+│   ├─ changelog.md
+│   ├─ Dockerfile
+│   ├─ Program.cs
+├─ api-number-at-letters-unit-test
+│	├─ api-number-at-letters-unit-test-csproj
+│	└─ NumberConverServiceTest.cs
+├─ .gitignore
+├─ api-number-at-letters.sln
+└─ README.md
+
+## Instalaci n
 
 1. Clona el repositorio:
 
@@ -33,19 +80,23 @@ Para este proyecto se contemplo los siguientes concepto:
 
 3. Restaura las dependencias:
 
+## Ejecucion de Test Unitarios
+
+dotnet test
+
 ## Uso Local
 
 1. Ejecutar el proyecto
 
 dotnet run --project api-number-at-letters/api-number-at-letters.csproj
 
-2. La Ap� estara disponible en: https://localhost:7261
+2. La Ap  estara disponible en: https://localhost:7261
 
 3. Accede a la documentacion de Swagger en: https://localhost:7261/swagger/index.html
 
 4. Endpoints
 
-- POST - /api/Authentication: Iniciar sessi�n y obtener token jwt (1 min de expiracion para efectos de prueba)
+- POST - /api/Authentication: Iniciar sessi n y obtener token jwt (1 min de expiracion para efectos de prueba)
 
 Las credeciales por defecto para un login correcto son: userName = 'userConverter' y password = '123456789'
 
@@ -65,9 +116,9 @@ curl --location 'https://localhost:7261/api/NumberConvert' \
 "number": 3243245235
 }'
 
-# Uso de api Publica
+## Uso de api Publica - Bajo HTTP
 
-- POST - /api/Authentication: Iniciar sessi�n y obtener token jwt (1 min de expiracion para efectos de prueba)
+- POST - /api/Authentication: Iniciar sessi n y obtener token jwt (1 min de expiracion para efectos de prueba)
 
 Las credeciales por defecto para un login correcto son: userName = 'userConverter' y password = '123456789'
 
@@ -87,11 +138,11 @@ curl --location 'http://54.198.206.104/api/NumberConvert' \
 "number": 3243245235
 }'
 
-# Coleccion Postman
+## Coleccion Postman
 
 Este recurso se encuentra en la raiz del proyecto.
 
-# Construir imagen de docker
+## Construir imagen de docker
 
 Para usar el archivo dockerfile para construir un contenedor la api:
 
@@ -105,7 +156,7 @@ Para usar el archivo dockerfile para construir un contenedor la api:
 
    docker run -d -p 80:80 api-number-at-letters
 
-# Proceso de despliegue en AWS EC2
+## Proceso de despliegue en AWS EC2
 
 1. Crear instancia de ec2 de su preferencia
 
