@@ -22,7 +22,7 @@ namespace api_number_at_letters.Services.Autorization
 
         private string GetToken(string userName)
         {
-            var privateKey = _configuration.GetValue<string>("JwtSettings:key");
+            var privateKey = _configuration["SYMETRICKEY"];
             var keyBytes = Encoding.ASCII.GetBytes(privateKey);
 
             var claims = new ClaimsIdentity();
