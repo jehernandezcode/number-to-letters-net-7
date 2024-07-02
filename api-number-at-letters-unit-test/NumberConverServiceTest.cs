@@ -18,9 +18,9 @@ namespace api_number_at_letters_unit_test
         }
 
         [Theory]
-        [InlineData(1, "uno")]
+        [InlineData(1, "un")]
         [InlineData(0, "cero")]
-        [InlineData(2451387, "dos millónes cuatrocientos cincuenta y uno mil trescientos ochenta y siete")]
+        [InlineData(2451387, "dos millónes cuatrocientos cincuenta y un mil trescientos ochenta y siete")]
         public void NumberConvertOk(long number, string result)
         {
             NumberRequestDto sendNumber = new NumberRequestDto
