@@ -12,8 +12,6 @@ using api_number_at_letters.Config;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Configuration.AddEnvironmentVariables();
-
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddSwaggerGen(c =>
 {
@@ -63,10 +61,10 @@ builder.Services.AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssembli
 
 
 //Config JWT
-var privateKey = builder.Configuration["SYMETRICKEY"];
+var privateKey = builder.Configuration.GetValue<string>("JwtSettings:key") ?? "";
 builder.Services.Configure<KeyConfig>((options) =>
 {
-    options.KeySecret = privateKey ?? "";
+    options.KeySecret = privateKey;
 });
 var keyBytes = Encoding.ASCII.GetBytes(privateKey);
 
