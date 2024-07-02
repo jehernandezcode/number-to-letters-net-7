@@ -77,6 +77,8 @@ curl --location 'http://localhost:5071/api/NumberConvert' \
 
 ## Uso de api Publica - Bajo HTTP
 
+Accede a la documentacion de Swagger en: http://54.198.206.104/swagger/index.html
+
 - POST - /api/Authentication: Iniciar sessión y obtener token jwt (1 min de expiracion para efectos de prueba)
 
 Las credeciales por defecto para un login correcto son: userName = 'userConverter' y password = '123456789'
