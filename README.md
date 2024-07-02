@@ -1,9 +1,9 @@
 # Number Converter API
 
 Esta API REST esta desarrollada con .NET 7, hace parte de un ejercicio de programacion bajo una arquitectura MVC y donde cuyo objetivo principal es ingresar un numero
-entero en los rangos 0 y 999.999.999.999; donde su resultado debe darse como la lectura de dicho numero pero en idioma espa ol.
+entero en los rangos 0 y 999.999.999.999; donde su resultado debe darse como la lectura de dicho numero pero en idioma español.
 
-## Caracter sticas
+## Características
 
 Para este proyecto se contemplo los siguientes concepto:
 
@@ -23,54 +23,7 @@ Para este proyecto se contemplo los siguientes concepto:
 - .NET 7 SDK
 - IDE de su preferencia
 
-## Estructura del proyecto
-
-api-number-at-letters
-├─ Commons
-│  └─ KeyConfig.cs
-├─ Controllers
-│  ├─ AuthenticationController.cs
-│  └─ NumberConvertController.cs
-├─ Exceptions
-│  ├─ BadRequestException.cs
-│  ├─ InternalServerException.cs
-│  └─ UnAuthorizationException.cs
-├─ Filters
-│  └─ GlobalExceptionsFilter.cs
-├─ Models
-│  ├─ Dto
-│  │  ├─ Request
-│  │  │  ├─ LoginRequestDto.cs
-│  │  │  └─ NumberRequestDto.cs
-│  │  └─ Response
-│  │  	  ├─ LoginResponseDto.cs
-│  │     └─ NumberConvertResponseDto.cs
-│  ├─ NumberConverter
-│  │  ├─ NumberConvert.cs
-│  │  └─ NumberConvertValidator.cs
-│  └─ ApiResponse.cs
-├─ Services
-│	├─ Authorization
-│	│	├─ AuthorizationService.cs
-│	│	└─ IAuthorizationService.cs
-│	└─	NumberConverter
-│	│	├─ INumberConverter.cs
-│	│	└─ NumberConverterService.cs
-│   ├─ Api NumberConverter.postman_collection.json
-│   ├─ api-number-at-letters.csproj
-│   ├─ api-number-at-letters.csproj.user
-│   ├─ appsettings.json
-│   ├─ changelog.md
-│   ├─ Dockerfile
-│   ├─ Program.cs
-├─ api-number-at-letters-unit-test
-│	├─ api-number-at-letters-unit-test-csproj
-│	└─ NumberConverServiceTest.cs
-├─ .gitignore
-├─ api-number-at-letters.sln
-└─ README.md
-
-## Instalaci n
+## Instalación
 
 1. Clona el repositorio:
 
@@ -152,7 +105,7 @@ Para usar el archivo dockerfile para construir un contenedor la api:
 
    docker build -t api-number-at-letters .
 
-2. Lanzar el contedor con la imagen de base
+2. Lanzar el contenedor con la imagen de base
 
    docker run -d -p 80:80 api-number-at-letters
 
