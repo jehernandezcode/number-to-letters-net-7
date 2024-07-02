@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "f044dd35-9f3a-4f10-88c5-adad6412fb35",
+		"name": "Api NumberConverter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19931251"
+	},
+	"item": [
+		{
+			"name": "Post - Number Convert",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJ1c2VyQ29udmVydGVyIiwibmJmIjoxNzE5OTI2NzE4LCJleHAiOjE3MTk5MjY3NzgsImlhdCI6MTcxOTkyNjcxOH0.ycSCT3NhUpThKPRkDHnKD0pOqnPzD-UJ-KiwbFB_FTE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": 3243245235\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST_NUMBER CONVERTER}}/api/NumberConvert",
+					"host": [
+						"{{HOST_NUMBER CONVERTER}}"
+					],
+					"path": [
+						"api",
+						"NumberConvert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post - Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"userConverter\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST_NUMBER CONVERTER}}/api/Authentication",
+					"host": [
+						"{{HOST_NUMBER CONVERTER}}"
+					],
+					"path": [
+						"api",
+						"Authentication"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
