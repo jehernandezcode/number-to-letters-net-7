@@ -1,6 +1,6 @@
 # Number Converter API
 
-Esta API REST esta desarrollada con .NET 7, hace parte de un ejercicio de programacion bajo una arquitectura MVC y donde cuyo objetivo principal es ingresar un numero
+Esta API REST esta desarrollada con .NET 7, hace parte de un ejercicio de programación bajo una arquitectura en capas, sin embargo también incorpora conceptos MVC. Donde cuyo objetivo principal es ingresar un numero
 entero en los rangos 0 y 999.999.999.999; donde su resultado debe darse como la lectura de dicho numero pero en idioma español.
 
 ## Características
